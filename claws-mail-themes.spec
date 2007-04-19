@@ -2,7 +2,7 @@
 %define pkgname sylpheed-claws-themes
 %define version_name claws-mail
 %define version 20070116 
-%define rel 4
+%define rel 5
 
 Summary:             Icon themes for %{version_name}
 Name:			%{name}
