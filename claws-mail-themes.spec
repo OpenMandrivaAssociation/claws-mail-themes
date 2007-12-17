@@ -13,7 +13,6 @@ License:		GPL
 URL:			http://claws-mail.org/
 Group:			Networking/Mail
 Requires:              %{version_name} >= 2.7.0
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildArch:	noarch 
 Obsoletes:	sylpheed-claws-themes
 Provides:	sylpheed-claws-themes
