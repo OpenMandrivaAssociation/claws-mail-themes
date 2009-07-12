@@ -1,3 +1,5 @@
+%define debug_package %{nil}
+
 Summary:	Icon themes for Claws-Mail
 Name:		claws-mail-themes
 Version:	20090605
@@ -33,5 +35,4 @@ rm -rf %{buildroot}
 
 %files -n %{name}
 %defattr(-,root,root)
-%doc RELEASE_NOTES
 %{_datadir}/claws-mail/themes/*
