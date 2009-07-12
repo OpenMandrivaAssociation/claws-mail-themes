@@ -1,37 +1,32 @@
-%define name claws-mail-themes
-%define pkgname sylpheed-claws-themes
-%define version_name claws-mail
-%define version 20070116 
-%define rel 5
-
-Summary:             Icon themes for %{version_name}
-Name:			%{name}
-Version:		%{version}
-Release:		%mkrel %{rel}
-Source:			http://prdownloads.sf.net/%{name}-%{version}.tar.bz2 
-License:		GPL
-URL:			http://claws-mail.org/
-Group:			Networking/Mail
-Requires:              %{version_name} >= 2.7.0
+Summary:	Icon themes for Claws-Mail
+Name:		claws-mail-themes
+Version:	20090605
+Release:	%mkrel 1
+License:	GPL
+Group:		Networking/Mail
+URL:		http://claws-mail.org/
+Source0:	http://www.claws-mail.org/themes/%{name}-%{version}.tar.bz2 
+Requires:	claws-mail >= 2.7.0
+BuildArch:	noarch
+Obsoletes:	sylpheed-claws-themes < %{version}
+Provides:	sylpheed-claws-themes = %{version}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
-BuildArch:	noarch 
-Obsoletes:	sylpheed-claws-themes
-Provides:	sylpheed-claws-themes
 
 %description
 This package contains various user contributed icon themes for claws-mail.
-Now available as a separate rpm.
 
 %prep
-%setup -q 
+%setup -q
 
 %build
+./autogen.sh
 
 %configure2_5x
+%make
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%makeinstall_std   
+rm -rf %{buildroot}
+%makeinstall_std
 
 %clean
 rm -rf %{buildroot}
@@ -39,6 +34,4 @@ rm -rf %{buildroot}
 %files -n %{name}
 %defattr(-,root,root)
 %doc RELEASE_NOTES
-%{_datadir}/%{version_name}/themes/*
-
-
+%{_datadir}/claws-mail/themes/*
