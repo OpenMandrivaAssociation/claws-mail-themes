@@ -2,12 +2,13 @@
 
 Summary:	Icon themes for Claws-Mail
 Name:		claws-mail-themes
-Version:	20100514
-Release:	%mkrel 2
+Version:	20110216
+Release:	%mkrel 1
 License:	GPL+
 Group:		Networking/Mail
 URL:		http://claws-mail.org/
-Source0:	http://www.claws-mail.org/themes/%{name}-%{version}.tar.bz2 
+Source0:	http://www.claws-mail.org/themes/%{name}-%{version}.tar.gz
+Patch0:		claws-mail-themes-20110216-fix-elementary-makefile.patch
 Requires:	claws-mail >= 2.7.0
 BuildArch:	noarch
 Obsoletes:	sylpheed-claws-themes < %{version}
@@ -19,6 +20,7 @@ This package contains various user contributed icon themes for claws-mail.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 ./autogen.sh
