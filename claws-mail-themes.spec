@@ -3,7 +3,7 @@
 Summary:	Icon themes for Claws-Mail
 Name:		claws-mail-themes
 Version:	20120129
-Release:	3
+Release:	4
 License:	GPL+
 Group:		Networking/Mail
 URL:		http://claws-mail.org/
