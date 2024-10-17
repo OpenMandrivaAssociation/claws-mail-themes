@@ -6,7 +6,7 @@ Version:	20140629
 Release:	1
 License:	GPL+
 Group:		Networking/Mail
-URL:		http://claws-mail.org/
+URL:		https://claws-mail.org/
 Source0:	http://www.claws-mail.org/themes/%{name}-%{version}.tar.gz
 Requires:	claws-mail
 BuildArch:	noarch
