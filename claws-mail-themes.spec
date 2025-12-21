@@ -14,6 +14,11 @@ Obsoletes:	sylpheed-claws-themes < %{version}
 Provides:	sylpheed-claws-themes = %{version}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 This package contains various user contributed icon themes for claws-mail.
 
